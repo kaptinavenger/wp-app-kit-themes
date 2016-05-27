@@ -8,7 +8,7 @@ Author URI: http://uncategorized-creations.com
 WP-AppKit Version Required: >= 0.5	
 -->
 
-# Wpak Bootstrap Theme - User Login Feature Demo
+# Wpak Bootstrap Theme - Based off the User Login Feature Demo
 
 This WP-AppKit theme adds the "User Login" and "Comment posting" features to the <a href="https://github.com/uncatcrea/wpak-theme-bootstrap">default Bootstrap theme</a>.
 
