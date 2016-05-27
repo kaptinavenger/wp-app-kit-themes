@@ -1,0 +1,459 @@
+body {
+    margin-top:70px;
+    margin-bottom: 100px;
+}
+#waiting{ 
+	z-index:1000;
+	background-color: #ddd;
+    background-image: url('../img/ajax-loader.gif');
+    background-position:  center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0; 
+}
+
+
+
+}
+/* this unlocks True Full Width App */
+div#container {
+    width: 100%;
+}
+
+
+/* full width images */
+/* post images allowed by theme php */
+img{
+	wax-width:100%;
+}
+/* full width videos */
+/* post iframe allowed by theme php */
+iframe{
+	max-width:100%}
+/* responsive video frame us div class video-container */
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+
+}
+.app-page, .video-container iframe, .video-container object, .video-container embed { 
+    padding-bottom: .6em;
+}
+
+ul.media-list .comments{
+	font-style:italic;
+}
+
+a.theapptitle {
+    font-size: xx-large;
+    text-shadow: 1px 1px black;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#app-title a:hover{
+	text-decoration:none;
+}
+
+
+.clearfix2 {
+	float:right;
+	margin: 4px 5px 4px 5px;
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	z-index:1;
+}]
+
+#single,#post-comments-list{
+	margin-bottom: 60px; /* make room for back button */
+}
+
+
+
+#single .wp-caption img{
+	margin-bottom:5px;
+}
+
+#post-comments-list .media-body p{
+	margin-top:1em;
+}
+
+.refresh-button-wrapper{
+
+}
+
+#refresh-button, #go-back{
+	font-size: 24px;
+    padding: 0px 0px;
+	height:auto;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+a#refresh-button.refreshing {
+	-webkit-animation-name: rotating;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+
+/* moved to the bottom and disconnected the button */
+/* changed the size color and typeog */
+#feedback {
+    padding: .5em;
+    background: #E0EFFF;
+    text-align: center;
+    margin: 0 2px 2em;
+    position: fixed;
+    bottom: 4em;
+    right: 1em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+#feedback.error{
+	background:#ffebe8;	
+}
+
+div.info{
+    padding:1em;
+}
+
+li.media{
+	cursor:pointer;
+}
+
+.get-more{
+	margin-bottom:1em;	
+	/* added weight */
+	font-weight:700;
+}
+
+
+#theme-modal .modal-dialog{
+    z-index: 1100;
+}
+
+#user-info input[type="text"],
+#user-info input[type="password"] {
+   width:7em; 
+   margin-right:1em;
+}
+
+
+h1#pageposttitle {
+    margin-top: 0.3em;
+}
+
+.thirdmainlog {
+    max-width: 100%;
+}
+
+
+/* rounding off the edges */
+button {
+    border-radius: 0px;
+	}
+button#go-login,
+button#login {
+    margin-right: 1em;
+}
+	
+	
+/** Specific CSS for custom transitions */
+#app-content-wrapper{
+    position: relative;
+    /** now we limits our full width because unlimited can be too much */
+    max-width: 1500px;
+
+}
+
+.app-page{
+    width: 100%;
+    -webkit-backface-visibility: hidden
+}
+/** /End custom transitions */
+
+/* fullscreen featured images */
+.post-thumbnail {
+	background: url(../img/img-icon.svg);
+	height: 200px;
+	background-size: cover;
+	background-position: center center;
+	margin: -20px -15px 0px -15px;
+    box-shadow: 1px 2px 3px;
+}
+
+.post-title h1 {
+	font-size: 28px;
+	line-height: 36px;
+	margin: 10px 0px 0px 0px;
+}
+
+
+h1#pagetop-header {
+    margin-top: .3em;
+}
+
+
+div#user-info {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    z-index: 99;
+    background-color: rgba(80, 80, 80, 0.81);
+    padding: 1em;
+    border-radius: 0px;
+    direction: rtl;
+}
+button#logout {
+    margin-right: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*SLIDE MENU from here down*/
+
+
+div#slidemenu {
+    top: 10px;
+}
+
+/* adjust body when menu is open */
+body.slide-active {
+    overflow-x: hidden
+}
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+    margin-top: 0px!important
+}
+
+
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+/*    position: relative; */
+    left: 0;
+/*    top: 70px;  */
+}
+/** #page-content.slide-active {
+    padding-top: 0
+} */
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: fixed;
+    line-height: 0;
+    float: left;
+    bottom: 1.1em;
+    padding: 5px 10px 5px 12px;
+    z-index: 9999;
+    width: 54px;
+    border-radius: 0%;
+    height: 50px;
+    border: 0;
+    background-color: #df382c;
+    box-shadow: 1px 1px 3px black;
+    /* align-content: center; */
+    /* vertical-align: middle; */
+}
+#slide-nav .navbar-toggle.slide-active{
+    box-shadow: none;
+    background-color: #3e152b;
+    bottom: 1em;
+    -webkit-transform: rotate(45deg);
+    padding: 5px 10px 6px 12px;
+
+}
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+    width: 80%;
+    display: block;
+    height: 3px;
+    margin: 6px 0px 4px 3px;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+//*    background: orange  */
+}
+.navbar-header {
+    position: relative
+}
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+    position: absolute;
+}
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:768px) { 
+	#slide-nav .container {
+	    margin: 0;
+	    padding: 0!important;
+	}
+	#slide-nav .navbar-header {
+	    margin: 0 auto;
+	    padding: 0 15px;
+        box-shadow: 0px 2px 4px #333;
+	}
+	#slide-nav .navbar.slide-active {
+	    position: absolute;
+	    width: 80%;
+	    top: -1px;
+	    z-index: 1000;
+	}
+	#slide-nav #slidemenu {
+	    background: #f7f7f7;
+	    left: -100%;
+	    width: 80%;
+	    min-width: 0;
+	    position: absolute;
+	    padding-left: 0;
+	    z-index: 2;
+	    top: -8px;
+	    margin: 0;
+        padding-top: 10px;
+	}
+	#slide-nav #slidemenu .navbar-nav {
+        position: fixed;
+	    min-width: 0;
+	    width: 80%;
+	    margin: 0;
+        padding: 15px;
+	}
+	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+	    min-width: 0;
+	    width: 80%;
+	    white-space: normal;
+	}
+	#slide-nav {
+	    border-top: 0
+	}
+	#slide-nav.navbar-inverse #slidemenu {
+	    background: #dd4814;   
+	}
+	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+	#slide-nav #navbar-height-col {
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+	    width: 80%;
+	    left: -80%;
+	    background: #dd4814;
+        color: 
+	}
+	#slide-nav.navbar-inverse #navbar-height-col {
+	    background: #dd4814;
+        box-shadow: 1px 0px 3px black;
+	    z-index: 1;
+	    border: 0;
+	}
+	#slide-nav .navbar-form {
+	    width: 100%;
+	    margin: 8px 0;
+	    text-align: center;
+	    overflow: hidden;
+	    /*fast clearfixer*/
+	}
+	#slide-nav .navbar-form .form-control {
+	    text-align: center
+	}
+	#slide-nav .navbar-form .btn {
+	    width: 100%
+	}
+}
+@media (min-width:768px) { 
+	#page-content {
+	    left: 0!important
+	}
+	.navbar.navbar-fixed-top.slide-active {
+	    position: fixed
+	}
+	.navbar-header {
+	    left: 0!important
+	}
+
+    .navbar-nav>li {
+        float: right;
+    }
+}
+
+@media (max-width:400px){
+    span.navbar-brand {
+    padding: 15px 5px;
+}
+    #slide-nav .navbar-toggle{
+        margin-right: 5px;
+}
+}
+ {
+    position: relative;
+
+}
+#app-title a {
+    color: #fff;
+}
+div#page-content,
+div#page-content.container,
+div#page-content.slide-active
+{
+  /*  position: relative; */
+ /*   top:70px; */
+}
+
+@media (min-width:768px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px
+    }
+
+.btn
+.btn-success
+.btn-info
+    .btn-danger {border-radius: 0px}
+.btn-warning
+.btn-primary
+.btn-secondary {
+        border-radius: 0px;
+}
+    
+.navbar-inverse {
+    box-shadow: 1px 1px 3px;
+}
+    
+    .navbar{
+        border:0px;
+    }
+input#userpass,
+input#userlogin {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+

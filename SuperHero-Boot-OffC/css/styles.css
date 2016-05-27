@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.ttf');
+}
+@font-face {
+    font-family: 'Latb';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+    
+body {
+    margin-top:70px;
+    margin-bottom: 100px;
+    font-family: Latb;
+}
+
+a.main-app-title {
+    font-size: +1.4em;
+    position: relative;
+    top: 0px;
+    left:-25px;
+    font-family: Lato;
+    margin-right: 1em;
+}
+
+/* moved to the bottom and disconnected the button */
+/* changed the size color and typeog */
+#feedback {
+    color:black;
+    padding: .5em;
+    background: #E0EFFF;
+    text-align: center;
+    margin: 0 0 2em;
+    position: fixed;
+    bottom: 4em;
+    right: 1em;
+    font-weight: 700;
+    z-index: 1;
+}
+
+#feedback.error{
+	background:#ffebe8;	
+}
+
+#waiting{ 
+	z-index:1000;
+	background-color: #ddd;
+    background-image: url('../img/ajax-loader.gif');
+    background-position:  center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0; 
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: Lato;
+}
+
+/* this unlocks True Full Width App */
+div#container {
+    width: 100%;
+}
+
+
+/* full width images */
+img{
+	wax-width:100%;
+}
+
+/* full width videos */
+iframe{
+	max-width:100%}
+
+/* responsive video frame us div class video-container */
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+
+}
+
+.app-page, .video-container iframe, .video-container object, .video-container embed { 
+    padding-bottom: .6em;
+}
+
+ul.media-list .comments{
+	font-style:italic;
+}
+
+#app-title a:hover{
+	text-decoration:none;
+}
+
+
+.clearfix2 {
+	float:right;
+	margin: 4px 5px 4px 5px;
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+	z-index:1;
+}
+
+#single,#post-comments-list{
+	margin-bottom: 60px; /* make room for back button */
+}
+
+#single .wp-caption img{
+	margin-bottom:5px;
+}
+
+#post-comments-list .media-body p{
+	margin-top:1em;
+}
+
+.refresh-button-wrapper{
+
+}
+
+#refresh-button, #go-back{
+	font-size: 24px;
+    padding: 0px 0px;
+	height:auto;
+    position: fixed;
+    right: 1em;
+    top:12px;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+a#refresh-button {
+
+}
+a#refresh-button.refreshing {
+	-webkit-animation-name: rotating;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+    color:#E0EFFF;
+}
+
+
+div.info{
+    padding:1em;
+}
+
+li.media{
+	cursor:pointer;
+}
+
+.get-more{
+	margin-bottom:1em;	
+	/* added weight */
+	font-weight:700;
+}
+
+#theme-modal .modal-dialog{
+    z-index: 1100;
+}
+
+#user-info input[type="text"],
+#user-info input[type="password"] {
+   width:7em; 
+   margin-right:1em;
+   margin-top: 3px;
+   margin-bottom: 4px;
+}
+
+
+h1#pageposttitle {
+    margin-top: .3em;
+}
+
+.thirdmainlog {
+    max-width: 100%;
+}
+
+/* rounding off the edges */
+
+button {
+    border-radius: 0px;
+}
+	
+	
+/** Specific CSS for custom transitions */
+#app-content-wrapper{
+    position: relative;
+    
+/** now we limits our full width because unlimited can be too much */
+    max-width: 1500px;
+
+}
+
+.app-page{
+    width: 100%;
+    -webkit-backface-visibility: hidden
+}
+
+
+/* fullscreen featured images */
+.post-thumbnail {
+    height: 200px;
+    background: url("../img/img-icon.svg") 50% 50% / cover;
+    background-position: 50% 50%;
+    margin: -20px -15px 0px;
+}
+
+.post-title h1 {
+	font-size: 28px;
+	line-height: 36px;
+	margin: 10px 0px 0px 0px;
+}
+
+
+h1#pagetop-header {
+    margin-top: .3em;
+}
+
+
+div#user-info {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    z-index: 99;
+    background-color: rgba(80, 80, 80, 0.81);
+    padding: 1em;
+    border-radius: 0px;
+    color: white;
+    direction: rtl;
+}
+
+/* Off Canvas Menu */
+div#slidemenu {
+    top: 10px;
+}
+
+/* adjust body when menu is open */
+body.slide-active {
+    overflow-x: hidden
+}
+
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+    margin-top: 0px!important
+}
+
+
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+    left: 0;
+}
+
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    left:-15px;
+    line-height: 0;
+    float: left;
+    margin: 0;
+    width: 48px;
+    height: 40px;
+    padding: 10px 10px 40px 10px;
+    border: 0;
+    z-index: 99999;
+    background: #DF691A;
+}
+#slide-nav .navbar-toggle.slide-active {
+    background: #5bc0de;
+    position: absolute;
+    margin-left: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    color: #4E5D6C;
+    background-color: #5bc0de;
+}
+
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > span.icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active > .icon-bar {
+background-color: #4E5D6C
+}
+
+.navbar-header {
+    position: relative
+}
+
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+    position: absolute;
+}
+
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:768px) { 
+	#slide-nav .container {
+	    margin: 0;
+	    padding: 0!important;
+	}
+    
+	#slide-nav .navbar-header {
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+    
+	#slide-nav .navbar.slide-active {
+	    position: absolute;
+	    width: 80%;
+	    top: -1px;
+	    z-index: 1000;
+	}
+    
+	#slide-nav #slidemenu {
+	    background: #f7f7f7;
+	    left: -100%;
+	    width: 80%;
+	    min-width: 0;
+	    position: absolute;
+	    padding-left: 0;
+	    z-index: 2;
+	    top: -8px;
+	    margin: 0;
+	}
+	#slide-nav #slidemenu .navbar-nav {
+	    min-width: 0;
+	    width: 100%;
+	    margin: 0;
+        padding-top: 10px;
+        font-family: Latb;
+        position: fixed;
+	}
+    
+	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+	    min-width: 0;
+	    width: 80%;
+	    white-space: normal;
+	}
+    
+	#slide-nav {
+	    border-top: 0
+	}
+    
+	#slide-nav.navbar-inverse #slidemenu {
+	    background: #df691a;   
+	}
+    
+	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+	#slide-nav #navbar-height-col {
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+	    width: 80%;
+	    left: -80%;
+	    background: #df691a;
+        color: 
+	}
+    
+	#slide-nav.navbar-inverse #navbar-height-col {
+	    background: #df691a;
+	    z-index: 1;
+	    border: 0;
+	}
+    
+	#slide-nav .navbar-form {
+	    width: 100%;
+	    margin: 8px 0;
+	    text-align: center;
+	    overflow: hidden;
+	}
+    
+	#slide-nav .navbar-form .form-control {
+	    text-align: center
+	}
+    
+	#slide-nav .navbar-form .btn {
+	    width: 100%
+	}
+}
+
+@media (min-width:768px) { 
+	#page-content {
+	    left: 0!important
+	}
+    
+	.navbar.navbar-fixed-top.slide-active {
+	    position: fixed
+	}
+    
+	.navbar-header {
+	    left: 0!important
+	}
+
+    .navbar-nav>li {
+        float: right;
+    }
+}
+
+@media (max-width:400px){
+    span.navbar-brand {
+    padding: 15px 5px;
+    }
+    
+    #slide-nav .navbar-toggle{
+        margin-right: 5px;
+    }    
+    
+    div#user-info {
+        padding: .3em;
+        padding-right: 1em;
+    }
+    button#logout, button#login, button#go-login {
+    margin: 0 1em 0 0;
+}
+}
+
+#app-title a {
+    color: #fff;
+}
+
+.navbar {
+    height: 50px;
+}
+
+}
+@media (min-width:991px) { 
+span.navbar-brand {
+    padding: 15px 15px;
+}
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 5px;
+    font-size: 19px;
+    line-height: 21px;
+    height: 40px;
+}
+@media (min-width: 768px) {
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+margin-left: 15px;
+}
+}
+
+button#logout,
+button#login,
+button#go-login {
+    margin: 0 1em 0 0;
+}
+
+
+@media (min-width: 768px){
+.navbar-nav {
+    float: right;
+    margin: 5px;
+}
+}
+
+span.glyphicon.glyphicon-chevron-right.pull-right.visible-xs {
+    top: 5px;
+    right:20%;
+}
