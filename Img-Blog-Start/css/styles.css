@@ -1,37 +1,29 @@
 @font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Light.ttf');
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.ttf');
+
 }
-@font-face {
-    font-family: 'Latb';
-    src: url('../fonts/Lato-Regular.ttf');
-}
-    
+
 body {
-    margin-top:70px;
     margin-bottom: 100px;
-    font-family: Latb;
 }
 
 a.main-app-title {
     font-size: +1.4em;
     position: relative;
-    top: 0px;
-    left:-25px;
-    font-family: Lato;
-    margin-right: 1em;
+    top: 2px;
+    font-family: Ubuntu;
 }
 
 /* moved to the bottom and disconnected the button */
 /* changed the size color and typeog */
 #feedback {
-    color:black;
     padding: .5em;
     background: #E0EFFF;
     text-align: center;
     margin: 0 0 2em;
     position: fixed;
-    bottom: 4em;
+    top: 2em;
     right: 1em;
     font-weight: 700;
     z-index: 1;
@@ -54,20 +46,7 @@ a.main-app-title {
 	top: 0;
 	left: 0; 
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-    font-family: Lato;
-}
+
 
 /* this unlocks True Full Width App */
 div#container {
@@ -120,7 +99,7 @@ ul.media-list .comments{
 	margin: 4px 5px 4px 5px;
 	position: fixed;
 	right: 2em;
-	bottom: 2em;
+	top: 2em;
 	z-index:1;
 }
 
@@ -144,9 +123,6 @@ ul.media-list .comments{
 	font-size: 24px;
     padding: 0px 0px;
 	height:auto;
-    position: fixed;
-    right: 1em;
-    top:12px;
 }
 
 @-webkit-keyframes rotating {
@@ -158,15 +134,11 @@ ul.media-list .comments{
     }
 }
 
-a#refresh-button {
-
-}
 a#refresh-button.refreshing {
 	-webkit-animation-name: rotating;
 	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
-    color:#E0EFFF;
 }
 
 
@@ -192,8 +164,6 @@ li.media{
 #user-info input[type="password"] {
    width:7em; 
    margin-right:1em;
-   margin-top: 3px;
-   margin-bottom: 4px;
 }
 
 
@@ -206,9 +176,8 @@ h1#pageposttitle {
 }
 
 /* rounding off the edges */
-
 button {
-    border-radius: 0px;
+    border-radius: 4px;
 }
 	
 	
@@ -230,6 +199,7 @@ button {
 /* fullscreen featured images */
 .post-thumbnail {
     height: 200px;
+    box-shadow: 1px 2px 3px;
     background: url("../img/img-icon.svg") 50% 50% / cover;
     background-position: 50% 50%;
     margin: -20px -15px 0px;
@@ -250,7 +220,7 @@ h1#pagetop-header {
 div#user-info {
     position: fixed;
     right: 1em;
-    bottom: 1em;
+    top: 1em;
     z-index: 99;
     background-color: rgba(80, 80, 80, 0.81);
     padding: 1em;
@@ -284,37 +254,23 @@ body.slide-active {
 #slide-nav .navbar-toggle {
     cursor: pointer;
     position: relative;
-    left:-15px;
     line-height: 0;
     float: left;
     margin: 0;
-    width: 48px;
+    margin-right: 15px;
+    width: 30px;
     height: 40px;
-    padding: 10px 10px 40px 10px;
+    padding: 10px 0 0 0;
     border: 0;
-    z-index: 99999;
-    background: #DF691A;
-}
-#slide-nav .navbar-toggle.slide-active {
-    background: #5bc0de;
-    position: absolute;
-    margin-left: 15px;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-    color: #4E5D6C;
-    background-color: #5bc0de;
+    background: transparent;
 }
 
 /* icon bar prettyup - optional */
-#slide-nav .navbar-toggle > span.icon-bar {
+#slide-nav .navbar-toggle > .icon-bar {
     width: 100%;
     display: block;
     height: 3px;
     margin: 5px 0 0 0;
-}
-#slide-nav .navbar-toggle.slide-active > .icon-bar {
-background-color: #4E5D6C
 }
 
 .navbar-header {
@@ -361,8 +317,6 @@ background-color: #4E5D6C
 	    width: 100%;
 	    margin: 0;
         padding-top: 10px;
-        font-family: Latb;
-        position: fixed;
 	}
     
 	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
@@ -376,7 +330,7 @@ background-color: #4E5D6C
 	}
     
 	#slide-nav.navbar-inverse #slidemenu {
-	    background: #df691a;   
+	    background: #dd4814;   
 	}
     
 	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
@@ -386,12 +340,12 @@ background-color: #4E5D6C
 	    height: 100%;
 	    width: 80%;
 	    left: -80%;
-	    background: #df691a;
+	    background: #dd4814;
         color: 
 	}
     
 	#slide-nav.navbar-inverse #navbar-height-col {
-	    background: #df691a;
+	    background: #dd4814;
 	    z-index: 1;
 	    border: 0;
 	}
@@ -433,67 +387,22 @@ background-color: #4E5D6C
 @media (max-width:400px){
     span.navbar-brand {
     padding: 15px 5px;
-    }
+}
     
     #slide-nav .navbar-toggle{
         margin-right: 5px;
     }    
-    
-    div#user-info {
-        padding: .3em;
-        padding-right: 1em;
-    }
-    button#logout, button#login, button#go-login {
-    margin: 0 1em 0 0;
-}
 }
 
 #app-title a {
     color: #fff;
 }
 
-.navbar {
-    height: 50px;
-}
 
-}
-@media (min-width:991px) { 
-span.navbar-brand {
-    padding: 15px 15px;
-}
-}
-.navbar-brand {
-    float: left;
-    padding: 15px 5px;
-    font-size: 19px;
-    line-height: 21px;
-    height: 40px;
-}
-@media (min-width: 768px) {
-.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-margin-left: 15px;
-}
-}
-
-button#logout,
-button#login,
-button#go-login {
-    margin: 0 1em 0 0;
-}
+@media (min-width:768px) {
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px
+    }
 
 
-@media (min-width: 768px){
-.navbar-nav {
-    float: right;
-    margin: 5px;
-}
-}
-
-span.menu-glyph {
-    top: 5px;
-    right: 20%;
-}
-
-.modal-dialog.optlog {
-    z-index: 1500;
-}

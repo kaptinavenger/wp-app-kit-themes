@@ -1,9 +1,15 @@
-		<div id="slidemenu">
+<div id="slidemenu">
 <ul class="nav navbar-nav">
 	<% if(menu_items.length){ %>
 		<% _.each( menu_items, function( menu_item ){ %>
-			<li><a href="<%= menu_item.link %>"><%= menu_item.label %> <span class="glyphicon glyphicon-chevron-right pull-right visible-xs"></span></a></li>
+			<li><a href="<%= menu_item.link %>"><%= menu_item.label %> <span class="menu-glyph glyphicon glyphicon-chevron-right pull-right visible-xs"></span></a></li>
 		<% }) %>
 	<% } %>
-</ul>
-            </div>
+        <li><a href="#" data-toggle="modal" data-target="#myModal">Options<span class="menu-glyph glyphicon glyphicon-cog pull-right visible-xs"></span></a>
+        </li>
+        </ul>
+
+</div>
+                
+
+                

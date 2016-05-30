@@ -289,6 +289,5 @@ define( [ 'jquery', 'core/theme-app', 'core/theme-tpl-tags', 'core/modules/stora
 
 
 });
-    
 
 } );
